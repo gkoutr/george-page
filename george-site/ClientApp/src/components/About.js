@@ -96,7 +96,7 @@ export class About extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={12}>
+                    <Col md={6}>
                         <Job test={this.state.name}/>
                     </Col>
                 </Row>

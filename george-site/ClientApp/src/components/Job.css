@@ -1,6 +1,11 @@
 ﻿.company-logo{
-    width:85%;
+    width:50%;
+    float:right;
 }
-.job-title{
-    font-weight:bold;
+.job-title {
+    font-weight: bold;
+}
+
+.job-location{
+    margin-top: -15px;
 }
