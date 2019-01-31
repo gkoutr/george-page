@@ -8,10 +8,9 @@ export class Header extends Component {
     render() {
         return (
             <Jumbotron>
-                <h1>Hello, world!</h1>
+                <h1>George's Blog!</h1>
                 <p>
-                    This is a simple hero unit, a simple jumbotron-style component for calling
-                    extra attention to featured content or information.
+                    Welcome to my blog, where I post about programming, gaming, sports, and other random interests.
                 </p>
                 <p>
                     <Button bsStyle="primary">Learn more</Button>

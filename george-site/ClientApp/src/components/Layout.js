@@ -9,7 +9,7 @@ export class Layout extends Component {
   render() {
     return (
         <Grid>
-            <Header />
+            <NavMenu />
             {this.props.children}
         </Grid>
     );
