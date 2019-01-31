@@ -4,6 +4,7 @@ import { Layout } from './components/Layout';
 import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { About } from './components/About';
+import { Education } from './components/Education';
 
 export default class App extends Component {
   displayName = App.name
@@ -13,7 +14,7 @@ export default class App extends Component {
       <Layout>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
-        <Route path='/fetchdata' component={FetchData} />
+        <Route path='/education' component={Education} />
       </Layout>
     );
   }

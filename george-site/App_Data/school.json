@@ -1,0 +1,22 @@
+[
+  {
+    "Id": "1",
+    "Name": "Towson University",
+    "Logo": "cipher_logo.jpg",
+    "Major": "Computer Science",
+    "Degree": "Bachelor of Science",
+    "StartDate": "Aug 2013",
+    "EndDate": "Dec 2016",
+    "Location": "Towson, MD"
+  },
+  {
+    "Id": "2",
+    "Name": "Anne Arundel Community College",
+    "Logo": "cipher_logo.jpg",
+    "Major": "Computer Science",
+    "Degree": "none",
+    "StartDate": "Aug 2010",
+    "EndDate": "May 2013",
+    "Location": "Arnold, MD"
+  }
+]

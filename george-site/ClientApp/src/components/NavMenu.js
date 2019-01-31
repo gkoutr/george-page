@@ -34,9 +34,9 @@ export class NavMenu extends Component {
                                     <NavLink href="javascript;">About</NavLink>
                                 </NavItem>
                             </LinkContainer>
-                            <LinkContainer to={'/'} exact>
+                            <LinkContainer to={'/education'} exact>
                                 <NavItem>
-                                    <NavLink href="javascript;">Work</NavLink>
+                                    <NavLink href="javascript;">Education</NavLink>
                                 </NavItem>
                             </LinkContainer>
                         </Nav>

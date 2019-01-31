@@ -22,7 +22,6 @@ export class About extends Component {
         fetch('api/About/GetJobs')
             .then(response => response.json())
             .then(data => {
-                debugger;
                 this.setState({jobs: data})
             })
     }
