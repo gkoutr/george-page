@@ -9,3 +9,10 @@
 .job-location{
     margin-top: -15px;
 }
+
+.card{
+    min-height:525px;
+}
+.job-card{
+    padding-top:20px
+}

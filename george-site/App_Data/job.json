@@ -1,0 +1,36 @@
+[
+  {
+    "Id": "1",
+    "CompanyName": "Cipher Systems",
+    "Logo": "cipher_logo.jpg",
+    "JobTitle": "Software Engineer",
+    "StartDate": "Dec 2017",
+    "EndDate": "Present",
+    "Location": "Annapolis, MD",
+    "JobDuties": [
+      "Work in an Agile team to develop, test, and maintain a SAAS Competitive Intelligence application on Microsoft technologies.",
+      "Design, develop, and unit test applications with established standards.",
+      "Participate in peer-reviews of code and solutions.",
+      "Create user-friendly UI's with JavaScript frameworks such as Knockout.js and JQuery.",
+      "Create and maintain Web APIs to retrieve data.",
+      "Write and maintain SQL Queries, Scripts and Stored Procedures to retrieve data.",
+      "Use CSS, HTML, and Bootstrap to create user friendly desktop and mobile UIs"
+    ]
+  },
+  {
+    "Id": "2",
+    "CompanyName": "Cipher Systems",
+    "Logo": "cipher_logo.jpg",
+    "JobTitle": "Junior QA Engineer",
+    "StartDate": "Nov 2016",
+    "EndDate": "Dec 2017",
+    "Location": "Annapolis, MD",
+    "JobDuties": [
+      "Design test plans, scenarios, scripts, and procedures.",
+      "Develop testing programs that address areas such as database impacts, software scenarios, regression testing, negative testing, error or bug retests, and usability",
+      "Monitor bug resolution efforts and track successes.",
+      "Update automated test scripts to ensure currency.",
+      "Investigate customer problems referred by technical support."
+    ]
+  }
+]

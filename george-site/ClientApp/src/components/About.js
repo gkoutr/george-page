@@ -10,62 +10,22 @@ import './About.css';
 export class About extends Component {
     displayName = About.name
 
-    state = {
-        name: "George Koutroumpis",
-        description: "Software Engineer",
-        location: "Annapolis, MD"
+    constructor(props) {
+        super(props);
+        this.state = {
+            jobs: [], name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD"
+        }
+        
     }
-    //constructor(props) {
-    //    super(props);
-    //    this.state = "test";
-    //    debugger;
-    //}
 
-    //componentDidMount() {
-    //    fetch('api/about/jobs')
-    //        .then(response => response.json())
-    //        .then(data => {
-    //            console.log(data);
-    //        })
-    //}
-
-    //render() {
-    //    return (
-    //        <div>
-    //            <Card>
-    //                <CardBody>
-    //                    <Row>
-
-    //                    <Col md={3}>
-    //                            <CardImg top src={logo} alt="Card image cap" />
-    //                    </Col>
-    //                        <Col md={9}>
-    //                            <CardTitle>{this.state.name}</CardTitle>
-    //                    </Col>
-    //                    </Row>
-    //                </CardBody>
-    //            </Card>
-    //        </div>
-    //    );
-    //}
-
-    //render() {
-    //    return (
-    //        <div>
-    //            <Row>
-
-    //                <Col md={3}>
-    //                    <img top src={logo} alt="Card image cap" />
-    //                </Col>
-    //                <Col md={9}>
-    //                    <h3>{this.state.name}</h3>
-    //                    <h4>{this.state.description}</h4>
-    //                   <h4>{this.state.location}</h4>
-    //                </Col>
-    //            </Row>
-    //        </div>
-    //    );
-    //}
+    componentDidMount() {
+        fetch('api/About/GetJobs')
+            .then(response => response.json())
+            .then(data => {
+                debugger;
+                this.setState({jobs: data})
+            })
+    }
 
     render() {
         
@@ -96,16 +56,13 @@ export class About extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={6}>
-                        <Job test={this.state.name}/>
-                    </Col>
+                    {this.state.jobs.map(job =>
+                        <Col md={6} key={job.id}>
+                            <Job job={job} />
+                        </Col>
+                    )}
                 </Row>
              </div>
             );
     }
 };
-
-About.defaultProps = {
-    name: "George",
-    age: "26"
-}
