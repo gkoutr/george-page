@@ -5,6 +5,7 @@ import {
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import School from './subcomponents/School';
+import Cert from './subcomponents/Certification';
 
 
 export class Education extends Component {
@@ -13,16 +14,17 @@ export class Education extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            schools: []
+            schools: [],
+            certs: []
         }
 
     }
 
     componentDidMount() {
-        fetch('api/About/GetSchools')
+        fetch('api/About/GetEducation')
             .then(response => response.json())
             .then(data => {
-                this.setState({ schools: data })
+                this.setState({ schools: data.schoolList,  certs: data.certList})
             })
     }
 
@@ -36,7 +38,14 @@ export class Education extends Component {
                     )}
                     
                 </Row>
+                <h1 className="text-center">Certifications</h1>
+                <Row>
+                    {this.state.certs.map(cert =>
+                        <Cert key={cert.id} cert={cert} />
+                    )}
+                </Row>
             </div>
+
         );
     }
 };

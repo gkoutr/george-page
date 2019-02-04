@@ -21,11 +21,11 @@ function School(props) {
                 <CardBody>
                     <Row>
                         <Col md={9}>
-                            <CardTitle className="h4">{school.name}</CardTitle>
+                            <CardTitle className="job-title">{school.name}</CardTitle>
                             {/*<CardSubtitle className="font-weight-bold"><span>{school.major}</span></CardSubtitle>*/}
                             {hasDegree(school)}
-                            <CardText>Aug 2013 - Dec 2016</CardText>
-                            <CardText className="job-location">Towson, MD</CardText>
+                            <CardText>{school.startDate} - {school.endDate}</CardText>
+                            <CardText className="job-location">{school.location}</CardText>
                         </Col>
                         <Col md={3}>
                             <CardImg className="school-logo" top width="100%" src={require('../../images/' + school.logo)} />
