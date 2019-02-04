@@ -2,7 +2,7 @@
   {
     "Id": "1",
     "Name": "Towson University",
-    "Logo": "cipher_logo.jpg",
+    "Logo": "towson.png",
     "Major": "Computer Science",
     "Degree": "Bachelor of Science",
     "StartDate": "Aug 2013",
@@ -12,9 +12,9 @@
   {
     "Id": "2",
     "Name": "Anne Arundel Community College",
-    "Logo": "cipher_logo.jpg",
+    "Logo": "aacc.png",
     "Major": "Computer Science",
-    "Degree": "none",
+    "Degree": "",
     "StartDate": "Aug 2010",
     "EndDate": "May 2013",
     "Location": "Arnold, MD"

@@ -22,6 +22,15 @@ namespace george_site.Controllers
             var jobs = JsonConvert.DeserializeObject<IEnumerable<Job>>(jsonText);
             return jobs;
         }
+
+        [HttpGet("[action]")]
+        public IEnumerable<School> GetSchools()
+        {
+
+            string jsonText = System.IO.File.ReadAllText("./App_Data/school.json");
+            var schools = JsonConvert.DeserializeObject<IEnumerable<School>>(jsonText);
+            return schools;
+        }
     }
 
     public class Job
@@ -35,5 +44,18 @@ namespace george_site.Controllers
         public string EndDate { get; set; }
         public string Location { get; set; }
         public string[] JobDuties { get; set; }
+    }
+
+    public class School
+    {
+
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Logo { get; set; }
+        public string Major { get; set; }
+        public string Degree { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public string Location { get; set; }
     }
 }

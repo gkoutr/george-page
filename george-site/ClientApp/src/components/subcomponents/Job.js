@@ -9,8 +9,8 @@ function Job(props) {
     
     const job = props.job;
     return (
-        <div className="job-card">
-            <Card> 
+        <div className="job">
+            <Card className="job-card"> 
                 <CardBody>
                     <Row>
                         <Col md={6}>
@@ -20,7 +20,7 @@ function Job(props) {
                             <CardText className="job-location">{job.location}</CardText>
                         </Col>
                         <Col md={6}>
-                            <CardImg className="company-logo" top width="100%" src={require('../images/' + job.logo)} />
+                            <CardImg className="company-logo" top width="100%" src={require('../../images/' + job.logo)} />
                         </Col>
                     </Row>
                     <h5 className="text-center">Job Duties</h5>

@@ -1,43 +1,40 @@
 ﻿import React, { Component } from 'react';
+import logo from '../images/towson.png';
 import {
     Row, Col, Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import logo from '../images/cipher_logo.jpg'
+import School from './subcomponents/School';
+
 
 export class Education extends Component {
     displayName = Education.name;
 
-    //constructor(props) {
-    //    super(props);
-    //    this.state = {
-    //        displayName: this.displayName
-    //    }
-    //}
+    constructor(props) {
+        super(props);
+        this.state = {
+            schools: []
+        }
+
+    }
+
+    componentDidMount() {
+        fetch('api/About/GetSchools')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ schools: data })
+            })
+    }
+
     render() {
         return (
-            <div>
+            <div className="edu">
                 <h1 className="text-center">{this.displayName}</h1>
                 <Row>
-                    <Col md={6}>
-                        <Card>
-                            <CardBody>
-                                <Row>
-                                    <Col md={6}>
-                                        <CardTitle className="h4">Towson University</CardTitle>
-                                        <CardSubtitle className="font-weight-bold">Bachelor of Science,<span>Computer Science</span></CardSubtitle>
-                                        <CardText>Aug 2013 - Dec 2016</CardText>
-                                        <CardText className="job-location">Towson, MD</CardText>
-                                    </Col>
-                                    <Col md={6}>
-                                        <CardImg className="company-logo" top width="100%" src="{logo}" />
-                                    </Col>
-                                </Row>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                    <Col md={6}>
-                    </Col>
+                    {this.state.schools.map(school =>
+                        <School key={school.id} school={school}/>
+                    )}
+                    
                 </Row>
             </div>
         );

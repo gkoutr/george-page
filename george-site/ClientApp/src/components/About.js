@@ -4,7 +4,7 @@ import {
     Row, Col, Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import Job from './Job';
+import Job from './subcomponents/Job';
 import './About.css';
 
 export class About extends Component {
@@ -27,7 +27,6 @@ export class About extends Component {
     }
 
     render() {
-        
         return (
             <div className="basic-info">
                 <Row>
