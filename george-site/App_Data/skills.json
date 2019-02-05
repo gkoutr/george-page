@@ -1,9 +1,9 @@
 [
   {
     "Id": 1,
-    "Category": "Progamming Languages",
+    "Category": "Programming Languages",
     "SkillsList": [
-      "C#",
+      "C# (.NET, MVC)",
       "HTML",
       "CSS3",
       ".LESS",

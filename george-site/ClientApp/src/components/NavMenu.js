@@ -29,9 +29,9 @@ export class NavMenu extends Component {
                                     <NavLink href="javascript;">Home</NavLink>
                                 </NavItem>
                             </LinkContainer>
-                            <LinkContainer to={'/about'} exact>
+                            <LinkContainer to={'/jobs'} exact>
                                 <NavItem>
-                                    <NavLink href="javascript;">About</NavLink>
+                                    <NavLink href="javascript;">Jobs</NavLink>
                                 </NavItem>
                             </LinkContainer>
                             <LinkContainer to={'/education'} exact>

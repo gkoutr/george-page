@@ -1,11 +1,10 @@
 ﻿import React, { Component } from 'react';
-import logo from '../images/profile-picture.jpeg';
+import logo from '../../images/test-profile.jpg';
 import {
     Row, Col, Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import Job from './subcomponents/Job';
-import './About.css';
+
 
 export class About extends Component {
     displayName = About.name
@@ -13,27 +12,19 @@ export class About extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            jobs: [], name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD"
+            name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD"
         }
-        
-    }
 
-    componentDidMount() {
-        fetch('api/About/GetJobs')
-            .then(response => response.json())
-            .then(data => {
-                this.setState({jobs: data})
-            })
     }
 
     render() {
         return (
             <div className="basic-info">
                 <Row>
-                    <Col md={3}>
+                    <Col md={2}>
                         <img src={logo} />
                     </Col>
-                    <Col md={9}>
+                    <Col md={10}>
                         <div>
                             <h5>{this.state.name}</h5>
                             <p className="textStyle">{this.state.description}</p>
@@ -53,14 +44,7 @@ export class About extends Component {
                         </a>
                     </Col>
                 </Row>
-                <Row>
-                    {this.state.jobs.map(job =>
-                        <Col md={6} key={job.id}>
-                            <Job job={job} />
-                        </Col>
-                    )}
-                </Row>
-             </div>
-            );
+            </div>
+          )
     }
 };
