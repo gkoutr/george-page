@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 1,
+    "Category": "Progamming Languages",
+    "SkillsList": [
+      "C#",
+      "HTML",
+      "CSS3",
+      ".LESS",
+      "JavaScript",
+      "Java",
+      "SQL",
+      "JSON",
+      "XML"
+    ]
+  },
+  {
+    "Id": 2,
+    "category": "Front-End Frameworks",
+    "skillsList": [
+      "Bootstrap",
+      "Semantic-UI"
+    ]
+  },
+  {
+    "Id": 3,
+    "category": "JavaScript Frameworks",
+    "skillsList": [
+      "Knockout.js",
+      "React",
+      "JQuery"
+    ]
+  },
+  {
+    "Id": 4,
+    "category": "Cloud Services",
+    "skillsList": [
+      "Heroku",
+      "Jenkins"
+    ]
+  },
+  {
+    "Id": 5,
+    "category": "Database Management",
+    "skillsList": [
+      "SQL Server"
+    ]
+  },
+  {
+    "Id": 6,
+    "category": "Software & IDEs",
+    "skillsList": [
+      "Visual Studio",
+      "Visual Studio Code",
+      "Eclipse",
+      "IntelliJ IDEA",
+      "Sublime Text",
+      "Microsoft Word",
+      "Microsoft Excel"
+    ]
+  },
+  {
+    "Id": 7,
+    "category": "Source Control",
+    "skillsList": [
+      "Git",
+      "Sourcetree",
+      "Github Desktop",
+      "Bitbucket"
+    ]
+  }
+]

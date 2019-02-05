@@ -29,12 +29,15 @@ namespace george_site.Controllers
 
             string schoolText = System.IO.File.ReadAllText("./App_Data/school.json");
             string certText = System.IO.File.ReadAllText("./App_Data/certification.json");
+            string skillText = System.IO.File.ReadAllText("./App_Data/skills.json");
             var schools = JsonConvert.DeserializeObject<IEnumerable<School>>(schoolText);
             var certs = JsonConvert.DeserializeObject<IEnumerable<Certification>>(certText);
+            var skills = JsonConvert.DeserializeObject<IEnumerable<Skill>>(skillText);
             var edu = new Education
             {
                 SchoolList = schools,
-                CertList = certs
+                CertList = certs,
+                SkillList = skills
             };
             return edu;
         }
@@ -57,6 +60,7 @@ namespace george_site.Controllers
     {
         public IEnumerable<School> SchoolList { get; set; }
         public IEnumerable<Certification> CertList { get; set; }
+        public IEnumerable<Skill> SkillList { get; set; }
     }
 
     public class Certification
@@ -81,5 +85,12 @@ namespace george_site.Controllers
         public string StartDate { get; set; }
         public string EndDate { get; set; }
         public string Location { get; set; }
+    }
+
+    public class Skill
+    {
+        public int Id { get; set; }
+        public string Category { get; set; }
+        public string[] SkillsList { get; set; }
     }
 }
