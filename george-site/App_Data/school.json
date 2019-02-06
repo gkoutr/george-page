@@ -1,6 +1,6 @@
 [
   {
-    "Id": "1",
+    "Id": 1,
     "Name": "Towson University",
     "Logo": "towson.png",
     "Major": "Computer Science",
@@ -10,7 +10,7 @@
     "Location": "Towson, MD"
   },
   {
-    "Id": "2",
+    "Id": 2,
     "Name": "Anne Arundel Community College",
     "Logo": "aacc.png",
     "Major": "Computer Science",

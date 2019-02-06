@@ -1,0 +1,36 @@
+[
+
+  {
+    "Id": 1,
+    "Title": "How to highlight text in a Rich Text Editor (QuillJS) and display on screen.",
+    "Image": "quill.png",
+    "shortDescription":  "Quill JS is a powerful rich text editor that allows you to do many different things. I will show you how to highligh text and display on the screen.",
+    "ContentHTML": [
+      {
+        "contentId":  1,
+        "Text": "I recently participated in a hack-a-thon and worked on a annotation tool. The front end purpose of the tool was to highlight entities such as \"Organizations\", \"Locations\" and \"People\". I used a free rich text editor called <a href=\"quilljs.com\">Quill JS<\/a> with <a href=\"https:\/\/knockoutjs.com\/\">KnockoutJS<\/a> to easily highlight text with your curser and display on the screen above. This is only the tip of the iceberg as Quill is so powerful and contains many different api calls that can be used. You can use any front-end UI framework you prefer, but in this case I will use Knockout JS.",
+        "GistId": ""
+      },
+      {
+        "contentId": 2,
+        "Text": "See <a href=\"https:\/\/codepen.io\/gkoutr\/pen\/PXRgBr\">Codepen<\/a> for live example.",
+        "GistId": ""
+      },
+      {
+        "contentId": 3,
+        "Text": "<strong>1.<\/strong> Include the cdn for KnockoutJS and QuillJS. Create the editor container and include the js file you will be loading from. I set an inline style for max-height so it won't take up the entire page.",
+        "GistId": "8ec0a1dc4bba063365ff166e2deaab67"
+      },
+      {
+        "contentId": 4,
+        "Text": "<strong>2.<\/strong>  Create the ViewModel and the observable, Initialize the Quill Editor, and add the function that will be called when there is an action to the RTE, in this case, highlighted.",
+        "GistId": "15787800dc0290d7ef89c7637b511bcd"
+      },
+      {
+        "contentId": 5,
+        "Text": "<strong>3.</strong> Add a basic unordered list with a data-bind to display that data when it is highlighted, and that's it!",
+        "GistId": "e1d0d00a79dfe9581bf31c89db5801f2"
+      }
+    ]
+  }
+]

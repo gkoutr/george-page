@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
 using Microsoft.AspNetCore.Mvc;
+using System.Web;
 
 namespace george_site.Controllers
 {
@@ -40,6 +41,19 @@ namespace george_site.Controllers
                 SkillList = skills
             };
             return edu;
+        }
+
+        [HttpGet("[action]")]
+        public IEnumerable<Post> GetPosts()
+        {
+            string postText = System.IO.File.ReadAllText("./App_Data/post.json");
+            var posts = JsonConvert.DeserializeObject<IEnumerable<Post>>(postText);
+            //foreach(var post in posts)`
+            //{
+            //    HttpUtility.HtmlDecode(post.ContentHTML);
+            //    //post.ContentHTML = html;
+            //}
+            return posts;
         }
     }
 
@@ -92,5 +106,21 @@ namespace george_site.Controllers
         public int Id { get; set; }
         public string Category { get; set; }
         public string[] SkillsList { get; set; }
+    }
+
+    public class Post
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string ShortDescription { get; set; }
+        public string Image { get; set; }
+        public ContentHTML[] ContentHTML { get; set; }
+    }
+
+    public class ContentHTML
+    {
+        public int Id { get; set; }
+        public string Text { get; set; }
+        public string GistId { get; set; }
     }
 }

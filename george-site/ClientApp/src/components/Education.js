@@ -35,6 +35,7 @@ export class Education extends Component {
             <div className="edu">
                 <div className="edu-section">
                     <h1 className="text-center">{this.displayName}</h1>
+                    <hr></hr>
                     <Row>
                         {this.state.schools.map(school =>
                             <School key={school.id} school={school} />
@@ -44,6 +45,7 @@ export class Education extends Component {
                 </div>
                 <div className="edu-section">
                     <h1 className="text-center">Certifications</h1>
+                    <hr></hr>
                     <Row>
                         {this.state.certs.map(cert =>
                             <Cert key={cert.id} cert={cert} />
@@ -52,6 +54,7 @@ export class Education extends Component {
                 </div>
                 <div className="edu-section">
                     <h1 className="text-center">Skills</h1>
+                    <hr></hr>
                     <Row>
                         <Col md={12}>
                             <Card className="skills-card">
