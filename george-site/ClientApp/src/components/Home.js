@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
+
 export class Home extends Component {
   displayName = Home.name
 
@@ -37,9 +38,9 @@ export class Home extends Component {
                             }
                             } style={{ cursor: 'pointer' }}>
                                 <Card>
-                                    <CardImg top width="100%" src={require('../images/' + post.image)} alt="post image" />
+                                    <CardImg top className="image-center" src={require('../images/' + post.image)} alt="post image" />
                                     <CardBody>
-                                        <CardTitle>{post.title}</CardTitle>
+                                        <CardTitle><strong>{post.title}</strong></CardTitle>
                                         <CardText>{post.shortDescription}</CardText>
                                     </CardBody>
                                 </Card>

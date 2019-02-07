@@ -7,11 +7,11 @@ using Newtonsoft.Json;
 using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using System.Web;
+using george_site.Models;
 
 namespace george_site.Controllers
 {
     [Route("api/[controller]")]
-    //[ApiController]
     public class AboutController : Controller
     {
         
@@ -48,79 +48,8 @@ namespace george_site.Controllers
         {
             string postText = System.IO.File.ReadAllText("./App_Data/post.json");
             var posts = JsonConvert.DeserializeObject<IEnumerable<Post>>(postText);
-            //foreach(var post in posts)`
-            //{
-            //    HttpUtility.HtmlDecode(post.ContentHTML);
-            //    //post.ContentHTML = html;
-            //}
             return posts;
         }
     }
 
-    public class Job
-    {
-        
-        public int Id { get; set;}
-        public string CompanyName { get; set; }
-        public string Logo { get; set; }
-        public string JobTitle { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
-        public string Location { get; set; }
-        public string[] JobDuties { get; set; }
-    }
-
-    public class Education
-    {
-        public IEnumerable<School> SchoolList { get; set; }
-        public IEnumerable<Certification> CertList { get; set; }
-        public IEnumerable<Skill> SkillList { get; set; }
-    }
-
-    public class Certification
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Organization { get; set; }
-        public string OrgLogo { get; set; }
-        public string Exam { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
-        public string CredentialUrl { get; set; }
-    }
-    public class School
-    {
-
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Logo { get; set; }
-        public string Major { get; set; }
-        public string Degree { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
-        public string Location { get; set; }
-    }
-
-    public class Skill
-    {
-        public int Id { get; set; }
-        public string Category { get; set; }
-        public string[] SkillsList { get; set; }
-    }
-
-    public class Post
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string ShortDescription { get; set; }
-        public string Image { get; set; }
-        public ContentHTML[] ContentHTML { get; set; }
-    }
-
-    public class ContentHTML
-    {
-        public int Id { get; set; }
-        public string Text { get; set; }
-        public string GistId { get; set; }
-    }
 }

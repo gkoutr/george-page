@@ -15,6 +15,8 @@ import {
     DropdownMenu,
     DropdownItem
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export class NavMenu extends Component {
   displayName = NavMenu.name
@@ -23,20 +25,20 @@ export class NavMenu extends Component {
             <div>
                 <Navbar color="light" light expand="md" className="center">
                     <Collapse navbar>
-                        <Nav navbar>
+                        <Nav navbar className="center-nav">
                             <LinkContainer to={'/'} exact>
                                 <NavItem>
-                                    <NavLink href="javascript;">Home</NavLink>
+                                    <NavLink href="javascript;" title="Home"><FontAwesomeIcon icon="home" />Home</NavLink>
                                 </NavItem>
                             </LinkContainer>
                             <LinkContainer to={'/jobs'} exact>
                                 <NavItem>
-                                    <NavLink href="javascript;">Jobs</NavLink>
+                                    <NavLink href="javascript;"><FontAwesomeIcon icon="user-tie" /> Jobs</NavLink>
                                 </NavItem>
                             </LinkContainer>
                             <LinkContainer to={'/education'} exact>
                                 <NavItem>
-                                    <NavLink href="javascript;">Education</NavLink>
+                                    <NavLink href="javascript;"><FontAwesomeIcon icon="university" /> Education</NavLink>
                                 </NavItem>
                             </LinkContainer>
                         </Nav>
