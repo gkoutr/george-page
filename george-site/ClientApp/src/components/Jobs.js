@@ -1,8 +1,6 @@
 ﻿import React, { Component } from 'react';
-import logo from '../images/test-profile.jpg';
 import {
-    Row, Col, Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    Row, Col, Spinner
 } from 'reactstrap';
 import Job from './subcomponents/Job';
 import './Jobs.css';
@@ -29,6 +27,7 @@ export class Jobs extends Component {
     render() {
         return (
             <div>
+                
                 <Row>
                     {this.state.jobs.map(job =>
                         <Col md={6} key={job.id}>

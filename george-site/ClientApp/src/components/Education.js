@@ -34,7 +34,7 @@ export class Education extends Component {
         return (
             <div className="edu">
                 <div className="edu-section">
-                    <h1 className="text-center">{this.displayName}</h1>
+                    <h1 className="text-center">Education</h1>
                     <hr></hr>
                     <Row>
                         {this.state.schools.map(school =>
