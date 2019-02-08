@@ -6,6 +6,10 @@
     color: black;
 }
 
+.mail-link{
+    color: red;
+}
+
 .basic-info{
     padding:15px;
 }

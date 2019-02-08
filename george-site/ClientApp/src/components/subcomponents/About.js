@@ -12,22 +12,23 @@ export class About extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD"
+            name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD",
+            description: "I am a devoted developer with around 2 years of professional experience. I work mainly with .NET, Knockout.js & React, but always looking to expand my knowledge in new technologies. If you need a website, feel free to contact me!"
         }
 
     }
 
     render() {
+        
         return (
             <div className="basic-info">
                 <Row>
                     <Col md={2}>
-                        <img src={logo} />
+                        <img className="center-mobile" src={logo} />
                     </Col>
-                    <Col md={10}>
-                        <div>
+                    <Col md={3} className="center-mobile-text">
+                        <div >
                             <h5>{this.state.name}</h5>
-                            <p className="textStyle">{this.state.description}</p>
                             <p>{this.state.location}</p>
                         </div>
                         <a className="linkedin-link" target="_blank" href="https://www.linkedin.com/in/george-koutroumpis-065629122/">
@@ -42,6 +43,15 @@ export class About extends Component {
                                 <i className="fab fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
+                        <a className="mail-link" target="_blank" href="mailto:gjkoutroumpis@gmail.com">
+                            <span className="fa-stack fa-lg">
+                                <i className="fas fa-circle fa-stack-2x"></i>
+                                <i className="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </Col>
+                    <Col md={7}>
+                        <p className="textStyle">{this.state.description}</p>
                     </Col>
                 </Row>
             </div>

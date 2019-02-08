@@ -20,14 +20,14 @@ function School(props) {
             <Card className="school-card">
                 <CardBody>
                     <Row>
-                        <Col md={9}>
+                        <Col md={9} sm={12} className="school-info">
                             <CardTitle className="job-title">{school.name}</CardTitle>
                             {/*<CardSubtitle className="font-weight-bold"><span>{school.major}</span></CardSubtitle>*/}
                             {hasDegree(school)}
                             <CardText>{school.startDate} - {school.endDate}</CardText>
                             <CardText className="job-location">{school.location}</CardText>
                         </Col>
-                        <Col md={3}>
+                        <Col md={3} sm={12}>
                             <CardImg className="school-logo" top width="100%" src={require('../../images/' + school.logo)} />
                         </Col>
                     </Row>

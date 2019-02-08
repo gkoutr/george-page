@@ -13,14 +13,14 @@ function Cert(props) {
             <Card className="cert-card">
                 <CardBody>
                     <Row>
-                        <Col md={9}>
+                        <Col md={9} sm={12} className="school-info">
                             <CardTitle className="job-title">{cert.name}</CardTitle>
                             <CardSubtitle>Exam: {cert.exam}</CardSubtitle>
                             <CardSubtitle>{cert.organization}</CardSubtitle>
 
                             <CardText>{cert.startDate} - {cert.endDate}</CardText>
                         </Col>
-                        <Col md={3}>
+                        <Col md={3} sm={12}>
                             <CardImg className="school-logo" top width="100%" src={require('../../images/' + cert.orgLogo)} />
                             <a className="cert-link" href={cert.credentialUrl} target="_blank">
                                 <i className="fas fa-external-link-alt"></i>

@@ -23,7 +23,7 @@ export class NavMenu extends Component {
     render() {
         return (
             <div>
-                <Navbar color="light" light expand="md" className="center">
+                <Navbar color="light" light expand="xs" className="center">
                     <Collapse navbar>
                         <Nav navbar className="center-nav">
                             <LinkContainer to={'/'} exact>

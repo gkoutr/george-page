@@ -18,7 +18,8 @@
     "Id": 2,
     "category": "Front-End Frameworks",
     "skillsList": [
-      "Bootstrap",
+      "Bootstrap 3.3.7",
+      "Bootstrap 4",
       "Semantic-UI"
     ]
   },
