@@ -11,7 +11,8 @@ export class Jobs extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            jobs: [], name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD"
+            jobs: [], name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD",
+            isLoading: true
         }
         
     }
@@ -20,22 +21,28 @@ export class Jobs extends Component {
         fetch('api/About/GetJobs')
             .then(response => response.json())
             .then(data => {
-                this.setState({jobs: data})
+                this.setState({ jobs: data, isLoading: false })
             })
     }
 
     render() {
-        return (
-            <div>
-                
-                <Row>
-                    {this.state.jobs.map(job =>
-                        <Col md={6} key={job.id}>
-                            <Job job={job} />
-                        </Col>
-                    )}
-                </Row>
-             </div>
+        if (this.state.isLoading) {
+            return (<div><Spinner className="image-center" style={{ width: '5rem', height: '5rem' }} />{' '}</div>);
+        }
+        else {
+            return (
+                <div>
+
+                    <Row>
+                        {this.state.jobs.map(job =>
+                            <Col md={6} key={job.id}>
+                                <Job job={job} />
+                            </Col>
+                        )}
+                    </Row>
+                </div>
             );
+        }
+        
     }
 };

@@ -2,8 +2,7 @@
 import Gist from 'react-gist';
 import Interweave from 'interweave';
 import {
-    Card, CardImg, CardText, CardBody, CardHeader, CardFooter,
-    CardTitle, CardSubtitle, Button, Row, Col
+    Card, CardText, CardBody, CardHeader, Spinner
 } from 'reactstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Disqus from 'disqus-react';
@@ -20,36 +19,58 @@ export class Post extends Component {
         super(props);
         this.state = {
             id: this.props.match.params.id,
-            post: {}
+            post: {},
+            isLoading: true
         }
     }
     componentWillMount() {
-        this.setState({ post: this.props.location.state.post })
+        debugger;
+        if (this.props.location.state != undefined && this.props.location.state != null && this.props.location.state != '') {
+            this.setState({ post: this.props.location.state.post, isLoading: false })
+        }
+        else {
+            debugger;
+            if (this.state.post != undefined && this.state.post != null) {
+                fetch('api/About/GetPostById/' + this.state.id)
+                    .then(response => response.json())
+                    .then(data => {
+                        debugger;
+                        this.setState({ post: data, isLoading: false })
+                    })
+            }
+        }
     }
 
     render() {
         const disqusShortname = 'george-website';
         const disqusConfig = {
-            url: 'http://localhost:49886/post/1',
+            url: 'https://www.gkoutr.com/post/' + this.state.id,
             identifier: this.state.post.id,
             title: this.state.post.title,
         };
-        return (
-            <div>
-                <Card>
-                    <CardHeader tag="h6">{this.state.post.title}</CardHeader>
-                    <CardBody>
-                        {this.state.post.contentHTML.map(content =>
-                            <CardText key={content.contentId}>
-                                <Interweave content={content.text} />
-                                {addGist(content.gistId)}
-                            </CardText>
-                         )}
-                    </CardBody>
-                    <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-                </Card>
-                    
-            </div>
-        );
+        if (this.state.isLoading) {
+            return (<div><Spinner className="image-center" style={{ width: '5rem', height: '5rem' }} />{' '}</div>);
+        }
+        else {
+            return (
+                <div>
+                    <Card>
+                        <CardHeader tag="h6">{this.state.post.title}</CardHeader>
+                        <CardBody>
+
+                            {this.state.post.contentHTML.map(content =>
+                                <CardText key={content.contentId}>
+                                    <Interweave content={content.text} />
+                                    {addGist(content.gistId)}
+                                </CardText>
+                            )}
+                        </CardBody>
+                        <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+                    </Card>
+
+                </div>
+            );
+        }
+        
     }
 }

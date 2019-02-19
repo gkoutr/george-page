@@ -50,6 +50,13 @@ namespace george_site.Controllers
             var posts = JsonConvert.DeserializeObject<IEnumerable<Post>>(postText);
             return posts;
         }
+        [HttpGet("[action]/{id}")]
+        public Post GetPostById(int id)
+        {
+            string postText = System.IO.File.ReadAllText("./App_Data/post.json");
+            var posts = JsonConvert.DeserializeObject<IEnumerable<Post>>(postText);
+            return posts.Where(x => x.Id == id).FirstOrDefault();
+        }
     }
 
 }
