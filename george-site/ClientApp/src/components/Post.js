@@ -4,6 +4,7 @@ import Interweave from 'interweave';
 import {
     Card, CardText, CardBody, CardHeader, Spinner
 } from 'reactstrap';
+import MetaTags from 'react-meta-tags'
 import { LinkContainer } from 'react-router-bootstrap';
 import Disqus from 'disqus-react';
 
@@ -24,7 +25,6 @@ export class Post extends Component {
         }
     }
     componentWillMount() {
-        debugger;
         if (this.props.location.state != undefined && this.props.location.state != null && this.props.location.state != '') {
             this.setState({ post: this.props.location.state.post, isLoading: false })
         }
@@ -54,10 +54,14 @@ export class Post extends Component {
         else {
             return (
                 <div>
+                    <MetaTags>
+                        <meta name="author" content="George Koutroumpis" />
+                        <meta property="og:description" content={this.state.post.shortDescription} />
+                        <meta property="og:title" content={this.state.post.title} />
+                    </MetaTags>
                     <Card>
                         <CardHeader tag="h6">{this.state.post.title}</CardHeader>
                         <CardBody>
-
                             {this.state.post.contentHTML.map(content =>
                                 <CardText key={content.contentId}>
                                     <Interweave content={content.text} />

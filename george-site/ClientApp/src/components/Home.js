@@ -32,6 +32,9 @@ export class Home extends Component {
         else {
             return (
                 <div>
+                    <MetaTags>
+                        <meta name="author" content="George Koutroumpis" />
+                    </MetaTags>
                     <h1 className="text-center">Blog Posts</h1>
                     <hr></hr>
                     <Row>
