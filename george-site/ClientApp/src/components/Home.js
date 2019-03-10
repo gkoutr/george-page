@@ -4,6 +4,7 @@ import {
     CardTitle, Row, Col, Spinner
 } from 'reactstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import MetaTags from 'react-meta-tags';
 
 
 export class Home extends Component {

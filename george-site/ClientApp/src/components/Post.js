@@ -29,12 +29,10 @@ export class Post extends Component {
             this.setState({ post: this.props.location.state.post, isLoading: false })
         }
         else {
-            debugger;
             if (this.state.post != undefined && this.state.post != null) {
                 fetch('api/About/GetPostById/' + this.state.id)
                     .then(response => response.json())
                     .then(data => {
-                        debugger;
                         this.setState({ post: data, isLoading: false })
                     })
             }
