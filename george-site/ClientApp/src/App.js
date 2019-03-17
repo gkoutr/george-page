@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
       <Layout>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={Jobs} />
         <Route path='/jobs' component={Jobs} />
         <Route path='/education' component={Education} />
             <Route path='/post/:id' component={Post} />

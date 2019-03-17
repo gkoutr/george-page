@@ -20,11 +20,6 @@ export class NavMenu extends Component {
                 <Navbar color="light" light expand="xs" className="center">
                     <Collapse navbar>
                         <Nav navbar className="center-nav">
-                            <LinkContainer to={'/'} exact>
-                                <NavItem>
-                                    <NavLink href="javascript;" title="Home"><FontAwesomeIcon icon="home" />Home</NavLink>
-                                </NavItem>
-                            </LinkContainer>
                             <LinkContainer to={'/jobs'} exact>
                                 <NavItem>
                                     <NavLink href="javascript;"><FontAwesomeIcon icon="user-tie" /> Jobs</NavLink>
