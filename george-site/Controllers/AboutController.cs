@@ -62,6 +62,7 @@ namespace george_site.Controllers
             var posts = JsonConvert.DeserializeObject<IEnumerable<Post>>(postText);
             return posts;
         }
+
         [HttpGet("[action]/{id}")]
         public Post GetPostById(int id)
         {
