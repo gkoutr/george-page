@@ -1,8 +1,9 @@
 ﻿import React, { Component } from 'react';
 import {
-    Row, Col, Card, CardBody, Spinner
+    Card, CardImg, CardText, Col,Row,
+    CardTitle, CardSubtitle, Button, Spinner
 } from 'reactstrap';
-import School from './subcomponents/School';
+import Project from './subcomponents/Project';
 import Cert from './subcomponents/Certification';
 import Skill from './subcomponents/Skill';
 
@@ -35,27 +36,14 @@ export class Projects extends Component {
         }
         else {
             return (
-                <div className="proj">
-                    <div className="proj-section">
-                        <h1 className="text-center">Education</h1>
-                        <hr></hr>
-                        <Row>
-                            {this.state.schools.map(school =>
-                                <School key={school.id} school={school} />
-                            )}
-
-                        </Row>
-                    </div>
-                    <div className="proj-section">
-                        <h1 className="text-center">Certifications</h1>
-                        <hr></hr>
-                        <Row>
-                            {this.state.certs.map(cert =>
-                                <Cert key={cert.id} cert={cert} />
-                            )}
-                        </Row>
-                    </div>
-                </div>
+                <div>
+                    <Row>
+                        <Col md={4}>
+                            <Project />
+                        </Col>
+                    </Row>
+                   
+                </div>     
             );
         }
 
