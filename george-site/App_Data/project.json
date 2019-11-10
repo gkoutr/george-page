@@ -1,0 +1,16 @@
+[
+
+  {
+    "Id": 1,
+    "Title": "Video Game Tracker",
+    "Image": "item-price-tracker.png",
+    "Description": "Video game price tracker that will retrieve updated buy/sell prices of your video game collection. Uses Pricecharting API.",
+    "Stack": "Node.js, KnockoutJS, MongoDB, EJS, Heroku",
+    "HasWebLink": true,
+    "WebUrl": "https://item-price-tracker.herokuapp.com",
+    "HasGithubLink": true,
+    "GithubUrl": "gkoutr/george-page",
+    "HasDownloadLink": false,
+    "DownloadUrl": ""
+  }
+]
