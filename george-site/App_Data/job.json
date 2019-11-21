@@ -3,6 +3,22 @@
     "Id": 1,
     "CompanyName": "Cipher Systems",
     "Logo": "cipher_logo.jpg",
+    "JobTitle": "Junior QA Engineer",
+    "StartDate": "Nov 2016",
+    "EndDate": "Dec 2017",
+    "Location": "Annapolis, MD",
+    "JobDuties": [
+      "Design test plans, scenarios, scripts, and procedures.",
+      "Develop testing programs that address areas such as database impacts, software scenarios, regression testing, negative testing, error or bug retests, and usability",
+      "Monitor bug resolution efforts and track successes.",
+      "Update automated test scripts to ensure currency.",
+      "Investigate customer problems referred by technical support."
+    ]
+  },
+  {
+    "Id": 2,
+    "CompanyName": "Cipher Systems",
+    "Logo": "cipher_logo.jpg",
     "JobTitle": "Software Engineer",
     "StartDate": "Dec 2017",
     "EndDate": "Present",
@@ -18,19 +34,20 @@
     ]
   },
   {
-    "Id": 2,
-    "CompanyName": "Cipher Systems",
-    "Logo": "cipher_logo.jpg",
-    "JobTitle": "Junior QA Engineer",
-    "StartDate": "Nov 2016",
-    "EndDate": "Dec 2017",
+    "Id": 3,
+    "CompanyName": "OpenPath Products",
+    "Logo": "openpathlogo.png",
+    "JobTitle": "Software Developer",
+    "StartDate": "Apr 2019",
+    "EndDate": "Present",
     "Location": "Annapolis, MD",
     "JobDuties": [
-      "Design test plans, scenarios, scripts, and procedures.",
-      "Develop testing programs that address areas such as database impacts, software scenarios, regression testing, negative testing, error or bug retests, and usability",
-      "Monitor bug resolution efforts and track successes.",
-      "Update automated test scripts to ensure currency.",
-      "Investigate customer problems referred by technical support."
+      "Develop and enhance software for mobile, server, and embedded project.",
+      "Manage deadlines while supporting team sprint planning and deliveries.",
+      "Work closely with customers in order to achieve a quality product of their needs.",
+      "Maintain user-friendly UI with JavaScript frameworks such as AngularJs and ReactJs.",
+      "Worked with multiple RESTful frameworks in Java such as Play and Spring Boot. ",
+      "Build and Maintain databases in MongoDB and SQL Server."
     ]
   }
 ]

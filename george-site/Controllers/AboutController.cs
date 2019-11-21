@@ -21,7 +21,7 @@ namespace george_site.Controllers
             
             string jsonText = System.IO.File.ReadAllText("./App_Data/job.json");
             var jobs = JsonConvert.DeserializeObject<IEnumerable<Job>>(jsonText);
-            return jobs;
+            return jobs.OrderByDescending(j => j.Id);
         }
 
         [HttpGet("[action]")]
