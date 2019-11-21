@@ -43,7 +43,6 @@ export class Education extends Component {
                             {this.state.schools.map(school =>
                                 <School key={school.id} school={school} />
                             )}
-
                         </Row>
                     </div>
                     <div className="edu-section">

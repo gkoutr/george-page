@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react';
+﻿    import React, { Component } from 'react';
 import './Job.css';
 import {
     Row, Col, Card, CardImg, CardText, CardBody,

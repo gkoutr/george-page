@@ -1,43 +1,49 @@
 ﻿import React, { Component } from 'react';
-import './Job.css';
 import {
     Row, Col, Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
+function Project(props) {
 
-
-export default class Project extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            job: props.job
+    function getProjectLink(project) {
+        if (project.hasWebLink) {
+            return <a className="project-links" href={project.webUrl} target="_blank">
+                        <i className="fas fa-external-link-alt fa-lg"></i>
+                    </a>
+        }
+        if (project.hasDownloadLink) {
+            return <a className="project-links" target="_blank">
+                <i className=" fas fa-download fa-lg"></i>
+            </a>
         }
     }
 
-    render() {
-        return (
-            <div className="project">
-                <Card className="project-card">
-                    <CardBody>
-                        <Row>
-                            <a href="https://item-price-tracker.herokuapp.com">
-
-                                <CardImg top width="100%" src={require('../../images/photo-unavailable.jpg')} alt="Card image cap" />
-                            </a>
-                                <CardBody>
-                                <CardTitle>Video Game Price Tracker</CardTitle>
-                                <CardText>Test text</CardText>
-                                <CardText>Stack: Node.js, KnockoutJS, express, mongodb, heroku</CardText>
-
-                                <Button>Button</Button>
-                                <Button><i className="fab fa-github"></i></Button>
-                            </CardBody> 
-                        </Row>
-                    </CardBody>
-                </Card>
-            </div>
-        );
+    function getGithubLink(project) {
+        if (project.hasGithubLink) {
+            return <a className="project-links" href={"https://github.com/" + project.githubUrl} title="view source code" alt="view source code" target="_blank">
+                <i className="fab fa-github fa-lg"></i>
+            </a> 
+        }
     }
 
+    const project = props.project;
+    return (
+        <Col md={4}>
+            <Card className="project-card">
+                <CardImg top width="100%" src={require('../../images/projects/' + project.image)} alt="Card image cap" />
+                <CardBody>
+                    <CardTitle>{project.title}</CardTitle>
+                 
+                    <CardText>{project.description}</CardText>
+                    <CardText>{project.stack}</CardText>
+                    {getGithubLink(project)}
+                    {getProjectLink(project)}
+                  
+                </CardBody>
+            </Card>
+        </Col>
+    );
 }
+
+export default Project;

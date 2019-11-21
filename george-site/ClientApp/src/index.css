@@ -80,3 +80,8 @@ html {
     background-color: white;
     min-height: 100vh;
 }
+
+/*Project*/
+.project-links  {
+    padding-right:7px;
+}

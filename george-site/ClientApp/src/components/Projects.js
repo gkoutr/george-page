@@ -1,11 +1,8 @@
 ﻿import React, { Component } from 'react';
 import {
-    Card, CardImg, CardText, Col,Row,
-    CardTitle, CardSubtitle, Button, Spinner
+    Row, Col, Card, CardBody, Spinner, CardImg, CardTitle, CardSubtitle, CardText, Button 
 } from 'reactstrap';
 import Project from './subcomponents/Project';
-import Cert from './subcomponents/Certification';
-import Skill from './subcomponents/Skill';
 
 export class Projects extends Component {
     displayName = Projects.name;
@@ -13,19 +10,16 @@ export class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            schools: [],
-            certs: [],
-            skills: [],
+            projects: [], 
             isLoading: true
         }
-
     }
 
     componentDidMount() {
-        fetch('api/About/GetEducation')
+        fetch('api/About/GetProjects')
             .then(response => response.json())
             .then(data => {
-                this.setState({ schools: data.schoolList, certs: data.certList, skills: data.skillList, isLoading: false })
+                this.setState({ projects: data, isLoading: false })
             })
     }
 
@@ -36,14 +30,18 @@ export class Projects extends Component {
         }
         else {
             return (
-                <div>
-                    <Row>
-                        <Col md={4}>
-                            <Project />
-                        </Col>
-                    </Row>
-                   
-                </div>     
+                <div className="proj">
+                    <div className="proj-section">
+                        <h1 className="text-center">Projects</h1>
+                        <hr></hr>
+                        <Row>
+                            {this.state.projects.map(project =>
+                                <Project key={project.id} project={project} />
+                            )}
+                        </Row>
+                    </div>
+                 
+                </div>
             );
         }
 
