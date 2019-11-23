@@ -9,17 +9,16 @@ import {
 export class About extends Component {
     displayName = About.name
 
+
     constructor(props) {
         super(props);
         this.state = {
             name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD",
-            description: "I am a devoted developer with around 3 years of professional experience. I work mainly with .NET, Knockout.js & React, but always looking to expand my knowledge in new technologies."
+            description: "I am a devoted developer with around 3 years of professional experience. I work mainly with web technologies in .NET, Java, and JavaScript but always looking to expand my knowledge in new technologies."
         }
-
     }
 
     render() {
-        
         return (
             <div className="basic-info">
                 <Row>
@@ -47,6 +46,12 @@ export class About extends Component {
                             <span className="fa-stack fa-lg">
                                 <i className="fas fa-circle fa-stack-2x"></i>
                                 <i className="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a className="blogger-link" target="_blank" href="https://www.gkcoderblog.com">
+                            <span className="fa-stack fa-lg">
+                                <i className="fas fa-circle fa-stack-2x"></i>
+                                <i className="fab fa-blogger fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </Col>
