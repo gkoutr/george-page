@@ -14,7 +14,7 @@ export class About extends Component {
         super(props);
         this.state = {
             name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD",
-            description: "I am a devoted developer with around 3 years of professional experience. I work mainly with web technologies in .NET, Java, and JavaScript but always looking to expand my knowledge in new technologies."
+            description: "I am a devoted developer with around 3 years of professional experience. I helped build a SaaS web application .NET for 2 years before building back-end web services in Spring Boot. I'm always eagar to learn new technologies in this ever-changing field."
         }
     }
 
@@ -42,16 +42,22 @@ export class About extends Component {
                                 <i className="fab fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
-                        <a className="mail-link" target="_blank" href="mailto:gjkoutroumpis@gmail.com">
+                        <a className="mail-link" target="_blank"  href="mailto:gjkoutroumpis@gmail.com">
                             <span className="fa-stack fa-lg">
                                 <i className="fas fa-circle fa-stack-2x"></i>
                                 <i className="fas fa-envelope fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
-                        <a className="blogger-link" target="_blank" href="https://www.gkcoderblog.com">
+                        <a className="blogger-link" target="_blank" title="My Blog" href="https://www.gkcoderblog.com">
                             <span className="fa-stack fa-lg">
                                 <i className="fas fa-circle fa-stack-2x"></i>
                                 <i className="fab fa-blogger fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a className="pluralsight-link" target="_blank" title="Pluralsight Profile" href="https://app.pluralsight.com/profile/george-koutroumpis">
+                            <span className="fa-stack fa-lg">
+                                <i className="fas fa-circle fa-stack-2x"></i>
+                                <i className="fas fa-chalkboard fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </Col>

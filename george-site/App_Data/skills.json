@@ -44,7 +44,8 @@
     "Id": 5,
     "category": "Database Management",
     "skillsList": [
-      "SQL Server"
+      "SQL Server",
+      "MongoDB"
     ]
   },
   {
