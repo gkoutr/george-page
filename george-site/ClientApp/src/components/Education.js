@@ -69,11 +69,8 @@ export class Education extends Component {
                             </Col>
                         </Row>
                     </div>
-
                 </div>
-
             );
         }
-        
     }
 }; 

@@ -18,7 +18,7 @@ export class Jobs extends Component {
     }
 
     componentDidMount() {
-        fetch('api/About/GetJobs')
+        fetch('api/about/jobs')
             .then(response => response.json())
             .then(data => {
                 this.setState({ jobs: data, isLoading: false })
