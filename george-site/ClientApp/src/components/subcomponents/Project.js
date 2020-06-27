@@ -34,12 +34,9 @@ function Project(props) {
                 <CardImg top width="100%" src={require('../../images/projects/' + project.image)} alt="Card image cap" />
                 <CardBody>
                     <CardTitle>{project.title}</CardTitle>
-                 
                     <CardText>{project.description}</CardText>
-                    <CardText>{project.stack}</CardText>
                     {getGithubLink(project)}
                     {getProjectLink(project)}
-                  
                 </CardBody>
             </Card>
         </Col>

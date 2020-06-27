@@ -9,12 +9,11 @@ import {
 export class About extends Component {
     displayName = About.name
 
-
     constructor(props) {
         super(props);
         this.state = {
             name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD",
-            description: "I am a devoted developer with around 3 years of professional experience. I work mainly with web technologies in .NET, Java, and JavaScript but always looking to expand my knowledge in new technologies."
+            description: "I am a Full Stack Software Engineer that has 3+ years in this field. I've helped build high quality software ranging from a SaaS application in .NET Core and Knockout.Js to back-end microservices in Spring boot for mobile applications. I'm always eagar to learn new technologies in this ever-changing field."
         }
     }
 
@@ -30,28 +29,34 @@ export class About extends Component {
                             <h5>{this.state.name}</h5>
                             <p>{this.state.location}</p>
                         </div>
-                        <a className="linkedin-link" target="_blank" href="https://www.linkedin.com/in/george-koutroumpis-065629122/">
+                        <a className="linkedin-link" target="_blank" href="https://www.linkedin.com">
                             <span className="fa-stack fa-lg">
                                 <i className="fas fa-circle fa-stack-2x"></i>
                                 <i className="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
-                        <a className="github-link" target="_blank" href="https://github.com/gkoutr">
+                        <a className="github-link" target="_blank" href="https://github.com">
                             <span className="fa-stack fa-lg">
                                 <i className="fas fa-circle fa-stack-2x"></i>
                                 <i className="fab fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
-                        <a className="mail-link" target="_blank" href="mailto:gjkoutroumpis@gmail.com">
+                        <a className="mail-link" target="_blank"  href="mailto:gjkoutroumpis@gmail.com">
                             <span className="fa-stack fa-lg">
                                 <i className="fas fa-circle fa-stack-2x"></i>
                                 <i className="fas fa-envelope fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
-                        <a className="blogger-link" target="_blank" href="https://www.gkcoderblog.com">
+                        <a className="blogger-link" target="_blank" title="My Blog" href="https://www.gkoutr.com">
                             <span className="fa-stack fa-lg">
                                 <i className="fas fa-circle fa-stack-2x"></i>
-                                <i className="fab fa-blogger fa-stack-1x fa-inverse"></i>
+                                <i className="fas fa-blog fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a className="pluralsight-link" target="_blank" title="Pluralsight Profile" href="https://app.pluralsight.com/profile/george-koutroumpis">
+                            <span className="fa-stack fa-lg">
+                                <i className="fas fa-circle fa-stack-2x"></i>
+                                <i className="fas fa-chalkboard fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </Col>

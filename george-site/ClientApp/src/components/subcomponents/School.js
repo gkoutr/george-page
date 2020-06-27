@@ -22,7 +22,6 @@ function School(props) {
                     <Row>
                         <Col md={9} sm={12} className="school-info">
                             <CardTitle className="job-title">{school.name}</CardTitle>
-                            {/*<CardSubtitle className="font-weight-bold"><span>{school.major}</span></CardSubtitle>*/}
                             {hasDegree(school)}
                             <CardText>{school.startDate} - {school.endDate}</CardText>
                             <CardText className="job-location">{school.location}</CardText>

@@ -11,17 +11,17 @@ using george_site.Models;
 
 namespace george_site.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/about")]
     public class AboutController : Controller
     { 
 
-        [HttpGet("[action]")]
+        [HttpGet("jobs")]
         public IEnumerable<Job> GetJobs()
         {
             
             string jsonText = System.IO.File.ReadAllText("./App_Data/job.json");
             var jobs = JsonConvert.DeserializeObject<IEnumerable<Job>>(jsonText);
-            return jobs.OrderByDescending(j => j.Id);
+            return jobs.OrderByDescending(x => x.Id);
         }
 
         [HttpGet("[action]")]

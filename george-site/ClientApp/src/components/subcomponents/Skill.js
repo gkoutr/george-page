@@ -3,6 +3,7 @@ import {
     Row, Col, Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
+import './School.css';
 
 function Skill(props) {
 
