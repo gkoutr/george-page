@@ -13,7 +13,7 @@ export class About extends Component {
         super(props);
         this.state = {
             name: "George Koutroumpis", title: "Software Engineer", location: "Annapolis, MD",
-            description: "I am a Full Stack Software Engineer that has 3+ years in this field. I've helped build high quality software ranging from a SaaS application in .NET Core and Knockout.Js to back-end microservices in Spring boot for mobile applications. I'm always eagar to learn new technologies in this ever-changing field."
+            description: "I'm a Full Stack Software Engineer that has helped build high quality software ranging from SaaS applications in .NET Core to back-end microservices in Spring boot. I'm always eagar to learn new technologies in this ever-changing field."
         }
     }
 

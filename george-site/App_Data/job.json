@@ -47,7 +47,9 @@
       "Work closely with customers in order to achieve a quality product of their needs.",
       "Maintain user-friendly UI with JavaScript frameworks such as AngularJs and ReactJs.",
       "Worked with multiple RESTful frameworks in Java such as Play and Spring Boot. ",
-      "Build and Maintain databases in MongoDB and SQL Server."
+      "Build and Maintain databases in MongoDB and SQL Server.",
+      "Build high quality APIs in Spring Boot with JSONAPI and REST API spec.",
+      "Create CICD pipelines in Bamboo to deploy maven artifacts to Pivotal Cloud Foundry."
     ]
   }
 ]

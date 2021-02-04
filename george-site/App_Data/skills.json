@@ -4,11 +4,11 @@
     "Category": "Programming Languages",
     "SkillsList": [
       "C# (.NET, MVC)",
+      "Java",
       "HTML",
       "CSS3",
       ".LESS",
       "JavaScript",
-      "Java",
       "SQL",
       "JSON",
       "XML"
@@ -37,7 +37,9 @@
     "category": "Cloud Services",
     "skillsList": [
       "Heroku",
-      "Jenkins"
+      "AWS",
+      "PCF",
+      "Bamboo CICD"
     ]
   },
   {
@@ -45,7 +47,8 @@
     "category": "Database Management",
     "skillsList": [
       "SQL Server",
-      "MongoDB"
+      "MongoDB",
+      "Redis"
     ]
   },
   {
@@ -67,7 +70,7 @@
     "skillsList": [
       "Git",
       "Sourcetree",
-      "Github Desktop",
+      "Github",
       "Bitbucket"
     ]
   }
